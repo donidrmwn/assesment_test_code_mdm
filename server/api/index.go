@@ -2,6 +2,7 @@ package handler
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"sort"
@@ -10,6 +11,10 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )
+
+func HelloWorld(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello World from Go!")
+}
 
 type Result struct {
 	Data interface{} `json:"data"`
