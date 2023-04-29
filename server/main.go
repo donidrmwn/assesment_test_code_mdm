@@ -61,7 +61,7 @@ func main() {
 
 func getTable(c echo.Context) error {
 
-	content, err := ioutil.ReadFile("./dprri.json")
+	content, err := ioutil.ReadFile("./jsonData/dprri.json")
 	if err != nil {
 		return c.JSON(http.StatusBadRequest, ErrorResult{
 			Code:    http.StatusBadRequest,
@@ -85,7 +85,7 @@ func getTable(c echo.Context) error {
 
 func getChart(c echo.Context) error {
 
-	content, err := ioutil.ReadFile("./dprri.json")
+	content, err := ioutil.ReadFile("./jsonData/dprri.json")
 	if err != nil {
 		return c.JSON(http.StatusBadRequest, ErrorResult{
 			Code:    http.StatusBadRequest,
@@ -107,7 +107,7 @@ func getChart(c echo.Context) error {
 }
 
 func getProvinsi(c echo.Context) error {
-	content, err := ioutil.ReadFile("./0.json")
+	content, err := ioutil.ReadFile("./jsonData/0.json")
 	if err != nil {
 		return c.JSON(http.StatusBadRequest, ErrorResult{
 			Code:    http.StatusBadRequest,
