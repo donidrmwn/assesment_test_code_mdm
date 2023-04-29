@@ -46,10 +46,6 @@ func main() {
 		AllowHeaders: []string{"X-Requested-With", "Content-Type", "Authorization"},
 	}))
 
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, World!")
-	})
-
 	e.GET("/table", getTable)
 	e.GET("/chart", getChart)
 	e.GET("/provinsi", getProvinsi)
