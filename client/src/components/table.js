@@ -42,13 +42,13 @@ export default function TableData() {
                                 <tr key={index}>
                                     <td>
                                         <span style={{ color: "blue" }}>{tableData.nama}</span>
-                                        {" (" + table[tableData?.id.toString()]["persen"].toFixed(1) + "%) "}
+                                        {" (" + table && table[tableData?.id.toString()]["persen"].toFixed(1) + "%) "}
                                     </td>
                                     {partai?.map((data, index) => {
                                         if (data?.is_aceh == false) {
                                             return (
                                                 <td key={index} style={{ textAlign: "right" }}>
-                                                    {table[tableData?.id.toString()][data?.id.toString()].toLocaleString()}
+                                                    { table &&  table[tableData?.id.toString()][data?.id.toString()].toLocaleString()}
                                                 </td>
                                             )
                                         }
