@@ -54,7 +54,7 @@ export function ChartData() {
         if (data?.is_aceh == false) {
             datasets.push({
                 label: data?.nama,
-                data: [chart[data?.id.toString()]],
+                data: [chart && chart[data?.id.toString()]],
                 backgroundColor: data?.warna,
             }
             )
