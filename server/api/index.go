@@ -36,7 +36,7 @@ type PartaiStruct struct {
 	NamaLengkap string  `json:"nama_lengkap"`
 }
 
-func Main() {
+func main() {
 	e := echo.New()
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
 		AllowOrigins: []string{"*"},
