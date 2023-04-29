@@ -151,7 +151,7 @@ func getProvinsi(c echo.Context) error {
 }
 func getPartai(c echo.Context) error {
 
-	content, err := ioutil.ReadFile("./partai.json")
+	content, err := ioutil.ReadFile("./jsonData/partai.json")
 	if err != nil {
 		return c.JSON(http.StatusBadRequest, ErrorResult{
 			Code:    http.StatusBadRequest,
