@@ -14,6 +14,7 @@ import (
 
 func HelloWorld(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello World from Go!")
+	main()
 }
 
 type Result struct {
