@@ -41,7 +41,7 @@ export default function TableData() {
                             return (
                                 <tr key={index}>
                                     <td>
-                                        <span style={{ color: "blue" }}>{tableData.nama}</span>
+                                        <span style={{ color: "blue" }}>{tableData?.nama}</span>
                                         {" (" + table && table[tableData?.id.toString()]["persen"].toFixed(1) + "%) "}
                                     </td>
                                     {partai?.map((data, index) => {
