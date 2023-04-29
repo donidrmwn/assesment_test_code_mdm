@@ -48,7 +48,7 @@ export default function TableData() {
                                         if (data?.is_aceh == false) {
                                             return (
                                                 <td key={index} style={{ textAlign: "right" }}>
-                                                    { table &&  table[tableData?.id.toString()][data?.id.toString()].toLocaleString()}
+                                                    { table && table[tableData?.id.toString()][data?.id.toString()].toLocaleString()}
                                                 </td>
                                             )
                                         }
