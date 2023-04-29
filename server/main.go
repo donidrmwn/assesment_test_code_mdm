@@ -53,7 +53,7 @@ func main() {
 	e.GET("/provinsi", getProvinsi)
 	e.GET("/partai", getPartai)
 
-	e.Logger.Fatal(e.Start(":5000"))
+	e.Logger.Fatal(e.Start(":"))
 
 }
 
