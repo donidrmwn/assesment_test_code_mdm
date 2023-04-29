@@ -38,7 +38,7 @@ type PartaiStruct struct {
 }
 
 func main() {
-	var port = ""
+	var port = "5000"
 	e := echo.New()
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
 		AllowOrigins: []string{"*"},
