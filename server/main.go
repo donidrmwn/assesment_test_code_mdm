@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"sort"
@@ -40,8 +41,8 @@ func main() {
 	e := echo.New()
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
 		AllowOrigins: []string{"*"},
-		AllowMethods: []string{echo.GET},
-		AllowHeaders: []string{"Content-Type"},
+		AllowMethods: []string{echo.GET, echo.PATCH, echo.DELETE, echo.POST},
+		AllowHeaders: []string{"X-Requested-With", "Content-Type", "Authorization"},
 	}))
 
 	e.GET("/", func(c echo.Context) error {
@@ -54,7 +55,7 @@ func main() {
 	e.GET("/partai", getPartai)
 
 	e.Logger.Fatal(e.Start(":"))
-
+	fmt.Println("server running")
 }
 
 func getTable(c echo.Context) error {
