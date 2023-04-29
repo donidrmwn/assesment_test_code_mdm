@@ -38,6 +38,7 @@ type PartaiStruct struct {
 }
 
 func main() {
+	var port = ""
 	e := echo.New()
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
 		AllowOrigins: []string{"*"},
@@ -54,7 +55,7 @@ func main() {
 	e.GET("/provinsi", getProvinsi)
 	e.GET("/partai", getPartai)
 
-	e.Logger.Fatal(e.Start(":"))
+	e.Logger.Fatal(e.Start(":" + port))
 	fmt.Println("server running")
 }
 
